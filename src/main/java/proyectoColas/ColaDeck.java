@@ -73,7 +73,7 @@ public class ColaDeck {
         }
     }
 
-    //este emetodo simplemente inserta cartas a el deck deseadp, se usa tanto para el deck oprignal como para el desodenado
+    //este metodo simplemente inserta cartas a el deck deseado, se usa tanto para el deck original como para el desodenado
     public void insertar(String fam, int id) {
         NodoCarta nuevo = new NodoCarta(fam, id);
         if (estaVacia()) {
