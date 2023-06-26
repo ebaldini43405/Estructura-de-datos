@@ -42,7 +42,8 @@ public class Main {
         Jugador jugador4 = new Jugador(deck4);
         Jugador jugador5 = new Jugador(deck5);
         
-        System.out.println("\nDECK JUGADOR 1:\n");
+        
+        System.out.println("DECK JUGADOR 1:\n");
         deck1.imprimirDeck();
         System.out.println("\nDECK JUGADOR 2:\n");
         deck2.imprimirDeck();
@@ -50,7 +51,7 @@ public class Main {
         deck3.imprimirDeck();
         System.out.println("\nDECK JUGADOR 4:\n");
         deck4.imprimirDeck();
-        System.out.println("\nDECK JUGADOR 5:\n");
+        System.out.println("\nDECK JUGADOR 5:");
         deck5.imprimirDeck();
         
             

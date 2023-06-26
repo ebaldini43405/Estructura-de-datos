@@ -52,7 +52,7 @@ public class PilaDeck {
         }
     }
 
-    public void imprimirDeck() {
+    /*public void imprimirDeck() {
         NodoCarta aux = cima;
         while (aux != null) {
             System.out.print(aux.fam + " ");
@@ -60,17 +60,33 @@ public class PilaDeck {
             System.out.print(" - ");
             aux = aux.siguiente;
         }
+    }*/
+    public void imprimirDeck() {
+        NodoCarta aux = cima;
+        imprimirDeckRecursivo(aux);
     }
-    public void insertar(NodoCarta elem){
-            NodoCarta nuevo = new NodoCarta(elem.fam,elem.id);
-            nuevo.siguiente = cima;
-            cima = nuevo;
-            tama++;
+
+    public void imprimirDeckRecursivo(NodoCarta aux) {
+
+        if (aux == null) {
+            return;
         }
-    public void repartir(ColaDeck deckDesordenado) 
-    {
-       insertar(deckDesordenado.inicio);
-       deckDesordenado.quitar();
+        System.out.print(aux.fam + " ");
+        imprimirIdentificador(aux);
+        System.out.print(" - ");
+        imprimirDeckRecursivo(aux.siguiente);
     }
-    
+
+    public void insertar(NodoCarta elem) {
+        NodoCarta nuevo = new NodoCarta(elem.fam, elem.id);
+        nuevo.siguiente = cima;
+        cima = nuevo;
+        tama++;
+    }
+
+    public void repartir(ColaDeck deckDesordenado) {
+        insertar(deckDesordenado.inicio);
+        deckDesordenado.quitar();
+    }
+
 }
