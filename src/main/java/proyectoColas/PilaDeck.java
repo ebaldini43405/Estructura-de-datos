@@ -1,43 +1,43 @@
 package proyectoColas;
 
+import javax.swing.JOptionPane;
+
 public class PilaDeck {
+
     private NodoCarta cima;
     int tama;
-    public PilaDeck(){
+    private Jugador jugador;
+
+    public PilaDeck() {
         cima = null;
         tama = 0;
     }
 
-    public boolean estaVacia(){
+    public boolean estaVacia() {
         return cima == null;
     }
 
-    public NodoCarta sacar(){
+    public NodoCarta sacar() {
         NodoCarta auxiliar = cima;
         cima = cima.siguiente;
         tama--;
         return auxiliar;
     }
-    public void insertarPilaDeck(NodoCarta elem)
-    {
-        NodoCarta nuevo = new NodoCarta(3);
-        nuevo.siguiente = cima;
-        cima = nuevo;
-        tama++;
-    }
-    public NodoCarta cima(){
+
+    public NodoCarta cima() {
         return cima;
     }
 
-    public int tamanoPila(){
+    public int tamanoPila() {
         return tama;
     }
 
-    public void limpiarPila(){
-        while (!estaVacia()){
+    public void limpiarPila() {
+        while (!estaVacia()) {
             sacar();
         }
     }
+
     public void imprimirIdentificador(NodoCarta aux) {
         if (aux.id == 13) {
             System.out.print("Rey");
@@ -51,17 +51,26 @@ public class PilaDeck {
             System.out.print(aux.id);
         }
     }
-    public void imprimirDeck(){
+
+    public void imprimirDeck() {
         NodoCarta aux = cima;
-        while (aux!=null){
+        while (aux != null) {
             System.out.print(aux.fam + " ");
             imprimirIdentificador(aux);
             System.out.print(" - ");
             aux = aux.siguiente;
         }
     }
-    public void repartir(ColaDeck deckDesordenado)
+    public void insertar(NodoCarta elem){
+            NodoCarta nuevo = new NodoCarta(elem.fam,elem.id);
+            nuevo.siguiente = cima;
+            cima = nuevo;
+            tama++;
+        }
+    public void repartir(ColaDeck deckDesordenado) 
     {
-        insertarPilaDeck(deckDesordenado.inicio);
+       insertar(deckDesordenado.inicio);
+       deckDesordenado.quitar();
     }
+    
 }

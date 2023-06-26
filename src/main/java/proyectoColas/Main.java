@@ -7,6 +7,7 @@ public class Main {
         ColaDeck deckDesordenado = new ColaDeck();
         //se genera el deckOriginal original
         deckOriginal.generarDeck();
+        
         System.out.println("DECK ARRGLADO(ORIGINAL)");
         deckOriginal.imprimirDeck();
         System.out.println("\nTAMANO DE DECK ARREGLADO = " + deckOriginal.tamanoDeck());
@@ -18,10 +19,42 @@ public class Main {
         System.out.println("\nTAMANO DE DECK DESARREGLADO = " + deckDesordenado.tamanoDeck());
         PilaDeck pila = new PilaDeck();
         System.out.println("\nTAMANO DE DECK DESARREGLADO = " + pila.tamanoPila());
-        Jugador jugador = new Jugador();
-        jugador.AgregarJugadores();
-        jugador.AgregarJugadores();
-        System.out.println(jugador.imprimirPila());
+        
+        
+        PilaDeck deck1 = new PilaDeck();
+        PilaDeck deck2 = new PilaDeck();
+        PilaDeck deck3 = new PilaDeck();
+        PilaDeck deck4 = new PilaDeck();
+        PilaDeck deck5 = new PilaDeck();
+        
+        for(int i=0;i<7;i++)
+        {
+            deck1.repartir(deckDesordenado);
+            deck2.repartir(deckDesordenado);
+            deck3.repartir(deckDesordenado);
+            deck4.repartir(deckDesordenado);
+            deck5.repartir(deckDesordenado);
+        }
+        
+        Jugador jugador1 = new Jugador(deck1);
+        Jugador jugador2 = new Jugador(deck2);
+        Jugador jugador3 = new Jugador(deck3);
+        Jugador jugador4 = new Jugador(deck4);
+        Jugador jugador5 = new Jugador(deck5);
+        
+        System.out.println("\nDECK JUGADOR 1:\n");
+        deck1.imprimirDeck();
+        System.out.println("\nDECK JUGADOR 2:\n");
+        deck2.imprimirDeck();
+        System.out.println("\nDECK JUGADOR 3:\n");
+        deck3.imprimirDeck();
+        System.out.println("\nDECK JUGADOR 4:\n");
+        deck4.imprimirDeck();
+        System.out.println("\nDECK JUGADOR 5:\n");
+        deck5.imprimirDeck();
+        
+            
+        }
+        
         
     }
-}
