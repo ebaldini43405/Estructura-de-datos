@@ -12,15 +12,19 @@ public class PilaDeck {
         return cima == null;
     }
 
-
-
     public NodoCarta sacar(){
         NodoCarta auxiliar = cima;
         cima = cima.siguiente;
         tama--;
         return auxiliar;
     }
-
+    public void insertarPilaDeck(NodoCarta elem)
+    {
+        NodoCarta nuevo = new NodoCarta(3);
+        nuevo.siguiente = cima;
+        cima = nuevo;
+        tama++;
+    }
     public NodoCarta cima(){
         return cima;
     }
@@ -55,5 +59,9 @@ public class PilaDeck {
             System.out.print(" - ");
             aux = aux.siguiente;
         }
+    }
+    public void repartir(ColaDeck deckDesordenado)
+    {
+        insertarPilaDeck(deckDesordenado.inicio);
     }
 }

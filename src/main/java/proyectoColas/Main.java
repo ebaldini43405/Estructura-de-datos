@@ -5,7 +5,6 @@ public class Main {
         //se crean dos decks uno original y otro desordenado
         ColaDeck deckOriginal = new ColaDeck();
         ColaDeck deckDesordenado = new ColaDeck();
-
         //se genera el deckOriginal original
         deckOriginal.generarDeck();
         System.out.println("DECK ARRGLADO(ORIGINAL)");
@@ -17,12 +16,12 @@ public class Main {
         System.out.println("\nDECK DESORDENADO");
         deckDesordenado.imprimirDeck();
         System.out.println("\nTAMANO DE DECK DESARREGLADO = " + deckDesordenado.tamanoDeck());
-
-
+        PilaDeck pila = new PilaDeck();
+        System.out.println("\nTAMANO DE DECK DESARREGLADO = " + pila.tamanoPila());
+        Jugador jugador = new Jugador();
+        jugador.AgregarJugadores();
+        jugador.AgregarJugadores();
+        System.out.println(jugador.imprimirPila());
         
-
-
-
-
     }
 }
