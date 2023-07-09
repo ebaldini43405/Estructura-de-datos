@@ -23,7 +23,7 @@ public class Main {
         System.out.println("\nTAMANO DE DECK DESARREGLADO = " + pila.tamanoPila());
         
         
-//        PilaDeck deck1 = new PilaDeck();
+//        PilaDeck deck1  = new PilaDeck();
 //        PilaDeck deck2 = new PilaDeck();
 //        PilaDeck deck3 = new PilaDeck();
 //        PilaDeck deck4 = new PilaDeck();
