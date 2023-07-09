@@ -1,6 +1,4 @@
-package proyectoColas;
-
-import javax.swing.JOptionPane;
+package proyecto;
 
 public class PilaDeck {
 

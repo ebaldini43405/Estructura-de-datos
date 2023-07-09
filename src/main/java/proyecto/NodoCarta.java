@@ -1,4 +1,4 @@
-package proyectoColas;
+package proyecto;
 
 public class NodoCarta {
     String fam;

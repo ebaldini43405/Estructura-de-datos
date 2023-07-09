@@ -1,4 +1,4 @@
-package proyectoColas;
+package proyecto;
 
 import java.util.Random;
 
