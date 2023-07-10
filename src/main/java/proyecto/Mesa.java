@@ -3,6 +3,7 @@ package proyecto;
 public class Mesa {
     NodoMesa inicio,fin;
 
+
     public Mesa(){
         inicio = null;
         fin = null;
@@ -23,15 +24,18 @@ public class Mesa {
         }
 
     }
+
     public void mostrarMesa(){
         NodoMesa recorrer = inicio;
         int numeroJugador = 1;
         while (recorrer != null){
 
             System.out.println("\nJugador #"+numeroJugador+" ");
+
             recorrer.jugador.deck.imprimirDeck();
             recorrer = recorrer.siguiente;
             numeroJugador++;
         }
+        System.out.println();
     }
 }
