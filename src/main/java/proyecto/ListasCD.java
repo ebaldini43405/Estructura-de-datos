@@ -1,5 +1,7 @@
 package proyecto;
 
+import javax.swing.JOptionPane;
+
 public class ListasCD {
     NodoCD primero;
     NodoCD ultimo;
@@ -35,4 +37,21 @@ public class ListasCD {
             numeroMesa++;
         }while(aux != primero);
     }
+    public void MostrarUnaMesa(int i)
+    {
+        NodoCD aux = primero;
+        int numeroMesa = 1;
+        do{
+            if(i==numeroMesa)
+            {
+            System.out.println("\n-----------------------------------------------\nMESA ELEGIDA="+numeroMesa);
+            aux.mesa.mostrarMesa();
+            
+          
+            }
+        aux = aux.siguiente;
+        numeroMesa++;
+        }while(aux != primero);
+    }
+   
 }
