@@ -53,7 +53,7 @@ public class ListaPerdedor
         NodoP recorrer = cabeza;
         System.out.println("\n"+"Jugadores Perdedores: ");
         while (recorrer != null){
-             
+            System.out.println("\nJugador #"+recorrer.jugador.id +" "); 
             recorrer.jugador.deck.imprimirDeck();
             System.out.println("\n");
             recorrer = recorrer.siguiente;

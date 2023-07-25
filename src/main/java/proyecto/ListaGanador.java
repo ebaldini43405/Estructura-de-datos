@@ -51,12 +51,15 @@ public class ListaGanador
              
     public void mostrarJugadoresGanadores(){
         NodoG recorrer = cabeza;
+   
         System.out.println("\n"+"Jugadores Ganadores: ");
         while (recorrer != null){
-             
+            
+            System.out.println("\nJugador #"+recorrer.jugador.id +" ");
             recorrer.jugador.deck.imprimirDeck();
             System.out.println("\n");
             recorrer = recorrer.siguiente;
+            
         }
         System.out.println();
     }

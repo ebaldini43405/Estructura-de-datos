@@ -11,7 +11,10 @@ public class Main {
         ListaPerdedor listaP = new ListaPerdedor();
         while(juego){
              opcion = Integer.parseInt(JOptionPane.showInputDialog("1 Para crear nueva mesa\n2 Para mostar todas las mesas"
-                                                                    +"\n3 Para mostrar jugadores ganadores\n6 Para salir"));
+                                                                    +"\n3 Para mostrar jugadores ganadores\n4 Para mostrar jugadores perdedores"
+                                                                    + "\n6 Para salir"));
+                                                                            
+                                                                            
 
             //crear nueva mesa
             if (opcion == 1){
@@ -246,10 +249,12 @@ public class Main {
              
             } else if (opcion == 3) {
                 listaG.mostrarJugadoresGanadores();
-                listaP.mostrarJugadoresPerdedores();
                 
 
 
+            }else if (opcion == 4) {
+                listaP.mostrarJugadoresPerdedores();
+            
             }else if (opcion == 6) {
                 juego = false;
                 JOptionPane.showMessageDialog(null,"Fin del juego de cartas, gracias por jugar");
