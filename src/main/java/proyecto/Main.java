@@ -9,10 +9,11 @@ public class Main {
         ListasCD listaMesas = new ListasCD();
         ListaGanador listaG = new ListaGanador();
         ListaPerdedor listaP = new ListaPerdedor();
+        ListaCS listaCartasSinUsar = new ListaCS();
         while(juego){
              opcion = Integer.parseInt(JOptionPane.showInputDialog("1 Para crear nueva mesa\n2 Para mostar todas las mesas"
                                                                     +"\n3 Para mostrar jugadores ganadores\n4 Para mostrar jugadores perdedores"
-                                                                    + "\n6 Para salir"));
+                                                                    +"\n5 Para mostrar cartas sin usar de cada mesa"+ "\n6 Para salir"));
                                                                             
                                                                             
 
@@ -86,6 +87,7 @@ public class Main {
 
                 listaMesas.insertar(mesa);
                 JOptionPane.showMessageDialog(null, "Mesa creada correctamente");
+                listaCartasSinUsar.insertar(deckDesordenado);
                 int jugadorGanador = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de jugador que ganó en esta mesa"));
                 if (jugadorGanador == 1)
                 {
@@ -255,7 +257,10 @@ public class Main {
             }else if (opcion == 4) {
                 listaP.mostrarJugadoresPerdedores();
             
-            }else if (opcion == 6) {
+            } else if (opcion == 5) {
+                System.out.println("----------------\nCartas sin usar en cada mesa");
+                listaCartasSinUsar.mostarCartasSinUsar();
+            } else if (opcion == 6) {
                 juego = false;
                 JOptionPane.showMessageDialog(null,"Fin del juego de cartas, gracias por jugar");
             }
